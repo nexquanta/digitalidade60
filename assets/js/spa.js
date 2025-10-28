@@ -1,0 +1,121 @@
+import { renderPage } from './templates.js';
+
+const routes = {
+  '/': 'home',
+  '/index.html': 'home',
+  '/projetos.html': 'projetos',
+  '/cadastro.html': 'cadastro'
+};
+
+let currentRoute = null;
+
+export function initRouter() {
+  console.log('📍 Inicializando sistema SPA');
+  document.addEventListener('click', handleLinkClick);
+  window.addEventListener('popstate', handlePopState);
+
+  const initialPath = window.location.pathname;
+  navigateTo(initialPath, false);
+}
+
+function handleLinkClick(e) {
+  const link = e.target.closest('a');
+  if (link && link.href && isInternalLink(link)) {
+    e.preventDefault();
+    const url = new URL(link.href);
+
+    if (url.hash) {
+      navigateTo(url.pathname, true, url.hash);
+    } else {
+      navigateTo(url.pathname);
+    }
+  }
+}
+
+function isInternalLink(link) {
+  return (
+    link.origin === window.location.origin &&
+    !link.hasAttribute('download') &&
+    !link.getAttribute('href').startsWith('#') &&
+    !link.getAttribute('href').startsWith('mailto:') &&
+    !link.getAttribute('href').startsWith('tel:')
+  );
+}
+
+export function navigateTo(path, pushState = true, hash = '') {
+  console.log(`🔀 Navegando para: ${path}${hash}`);
+
+  if (path === '/' || path === '/index.html' || path === '') {
+    path = '/';
+  }
+
+  const routeName = routes[path] || routes['/'];
+
+  if (pushState) {
+    window.history.pushState({ route: routeName }, '', path + hash);
+  }
+
+  // Renderiza o conteúdo da rota
+  renderPage(routeName);
+
+  // Dispara evento global para reativar módulos como acessibilidade, menu e validação
+  const event = new CustomEvent('pageRendered', { detail: { page: routeName } });
+  document.dispatchEvent(event);
+
+  currentRoute = routeName;
+
+  // Se há hash (#), faz scroll até o elemento
+  if (hash) {
+    setTimeout(() => {
+      scrollToAnchor(hash);
+    }, 100);
+  } else {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  // Fecha menu mobile (se estiver aberto)
+  const nav = document.querySelector('nav');
+  if (nav && nav.classList.contains('active')) {
+    nav.classList.remove('active');
+    document.querySelector('.menu-overlay')?.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+}
+
+function scrollToAnchor(hash) {
+  const id = hash.replace('#', '');
+  const element = document.getElementById(id);
+
+  if (element) {
+    console.log(`⚓ Fazendo scroll até: #${id}`);
+    const headerHeight = document.querySelector('header')?.offsetHeight || 0;
+    const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+    const offsetPosition = elementPosition - headerHeight - 20;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  } else {
+    console.warn(`⚠️ Elemento não encontrado: #${id}`);
+  }
+}
+
+function handlePopState(e) {
+  const routeName = e.state?.route || 'home';
+  renderPage(routeName);
+  currentRoute = routeName;
+
+  // Dispara novamente o evento para manter consistência na navegação pelo histórico
+  const event = new CustomEvent('pageRendered', { detail: { page: routeName } });
+  document.dispatchEvent(event);
+}
+
+export function getCurrentRoute() {
+  return currentRoute;
+}
+
+export const router = {
+  navigate: navigateTo,
+  current: getCurrentRoute
+};

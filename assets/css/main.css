@@ -1,0 +1,386 @@
+/* Main CSS */
+
+/* Importação dos módulos */
+@import url('01-variables.css');
+@import url('02-reset.css');
+@import url('03-layout.css');
+@import url('04-components.css');
+@import url('05-utilities.css');
+@import url('06-extras.css');
+@import url('07-themes.css');
+
+/* Sobrescrita - legend DENTRO do fieldset */
+form fieldset {
+  position: relative;
+  border: 2px solid var(--color-neutral-200);
+  border-radius: var(--radius-xl);
+  padding: var(--space-xl);
+  padding-top: 3.5rem;
+  margin-bottom: var(--space-xl);
+  margin-top: var(--space-md);
+  background: linear-gradient(to bottom, var(--color-bg-primary), var(--color-neutral-50));
+}
+
+form legend {
+  position: absolute;
+  top: var(--space-lg);
+  left: var(--space-xl);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary-700);
+  padding: 0;
+  background: transparent;
+  margin: 0;
+  width: auto;
+  max-width: calc(100% - 3rem);
+}
+
+/* Hero Section */
+section:first-of-type {
+  background: var(--color-neutral-900);
+  padding: var(--space-3xl) var(--space-xl);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-3xl);
+  box-shadow: var(--shadow-md);
+  border: 3px solid var(--color-primary-500);
+}
+
+section:first-of-type h1 {
+  color: var(--color-text-inverse);
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-black);
+  line-height: 1.2;
+  margin-bottom: var(--space-xl);
+  position: relative;
+}
+
+section:first-of-type h1::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary-500), var(--color-primary-600));
+  margin-top: var(--space-md);
+  border-radius: var(--radius-sm);
+}
+
+section:first-of-type p {
+  color: var(--color-neutral-300);
+}
+
+/* Grid de Projetos */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-xl);
+  margin-top: var(--space-2xl);
+}
+
+/* Cards de Projetos */
+article {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--color-neutral-900);
+  border: 3px solid var(--color-primary-500);
+  transition: all var(--transition-base);
+}
+
+article:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--color-primary-400);
+}
+
+article figure {
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+article figure::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.3) 100%);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+article:hover figure::after {
+  opacity: 1;
+}
+
+article p {
+  flex-grow: 1;
+  padding: 0 var(--space-xl) var(--space-xl);
+  color: var(--color-neutral-300);
+}
+
+article h2 {
+  color: var(--color-text-inverse);
+  font-weight: var(--font-weight-bold);
+  position: relative;
+  padding: var(--space-xl);
+  padding-left: calc(var(--space-xl) + var(--space-md));
+}
+
+article h2::before {
+  content: '';
+  position: absolute;
+  left: var(--space-xl);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 70%;
+  background: var(--color-primary-500);
+  border-radius: var(--radius-sm);
+}
+
+article strong,
+section strong {
+  color: var(--color-primary-400);
+  font-weight: var(--font-weight-bold);
+}
+
+/* Cards especiais */
+.missao-card,
+.fale-conosco-card,
+.como-participar-card {
+  background: var(--color-neutral-900);
+  border: 3px solid var(--color-primary-500);
+  border-radius: var(--radius-xl);
+  padding: var(--space-2xl);
+  margin-bottom: var(--space-3xl);
+  box-shadow: var(--shadow-md);
+}
+
+.missao-card h2,
+.fale-conosco-card h2,
+.como-participar-card h2 {
+  color: var(--color-text-inverse);
+  margin-bottom: var(--space-lg);
+}
+
+.missao-card p,
+.fale-conosco-card p,
+.como-participar-card p {
+  color: var(--color-neutral-300);
+}
+
+.missao-card strong,
+.fale-conosco-card strong,
+.como-participar-card strong {
+  color: var(--color-primary-400);
+}
+
+.missao-card p a,
+.fale-conosco-card p a,
+.como-participar-card p a {
+  display: inline !important;
+  padding: 0 !important;
+  background: transparent !important;
+  color: var(--color-primary-400) !important;
+  font-weight: var(--font-weight-semibold) !important;
+  border-radius: 0 !important;
+  margin-top: 0 !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+  transition: color var(--transition-base) !important;
+}
+
+.missao-card p a:hover,
+.fale-conosco-card p a:hover,
+.como-participar-card p a:hover {
+  color: var(--color-primary-300) !important;
+  background: transparent !important;
+  transform: none !important;
+  box-shadow: none !important;
+  text-decoration: none !important;
+}
+
+.cadastro-intro {
+  background: var(--color-neutral-900);
+  padding: var(--space-2xl);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-2xl);
+  border: 3px solid var(--color-primary-500);
+  box-shadow: var(--shadow-md);
+}
+
+.cadastro-intro h1 {
+  color: var(--color-text-inverse);
+}
+
+.cadastro-intro p {
+  color: var(--color-neutral-300);
+}
+
+.cadastro-intro strong {
+  color: var(--color-primary-400);
+}
+
+form {
+  max-width: 100%;
+  width: 100%;
+  margin: var(--space-2xl) 0;
+}
+
+form button[type="submit"] {
+  width: 100%;
+  padding: var(--space-lg) var(--space-xl);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  margin-top: var(--space-xl);
+  background: var(--color-primary-500);
+  color: white;
+  border: none;
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+form button[type="submit"]:hover {
+  background: var(--color-primary-600);
+  box-shadow: var(--shadow-lg);
+}
+
+label:has(+ input[required])::after,
+label:has(+ select[required])::after {
+  content: ' *';
+  color: var(--color-primary-500);
+  font-weight: var(--font-weight-bold);
+}
+
+a:focus-visible {
+  outline: 3px solid var(--color-primary-500);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+.skip-to-content {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: var(--color-primary-600);
+  color: white;
+  padding: var(--space-md) var(--space-lg);
+  z-index: 100;
+  border-radius: 0 0 var(--radius-md) 0;
+  font-weight: var(--font-weight-semibold);
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+section {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+article {
+  animation: fadeIn 0.8s ease-out;
+  animation-fill-mode: both;
+}
+
+article:nth-child(1) { animation-delay: 0.1s; }
+article:nth-child(2) { animation-delay: 0.2s; }
+article:nth-child(3) { animation-delay: 0.3s; }
+
+@media print {
+  header, footer, nav, .menu-toggle {
+    display: none;
+  }
+  
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+    color: #000;
+  }
+  
+  section, article {
+    page-break-inside: avoid;
+  }
+}
+
+@media (max-width: 768px) {
+  section:first-of-type h1 {
+    font-size: var(--font-size-3xl);
+  }
+  
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1040;
+  }
+  
+  .menu-overlay.active {
+    display: block;
+  }
+  
+  nav {
+    z-index: 1050;
+  }
+  
+  nav.active {
+    z-index: 1050;
+    pointer-events: auto !important;
+  }
+  
+  nav a {
+    position: relative !important;
+    z-index: 1051;
+    pointer-events: auto !important;
+    cursor: pointer !important;
+  }
+  
+  nav ul {
+    position: relative !important;
+    z-index: 1051;
+    pointer-events: auto !important;
+  }
+  
+  nav li {
+    position: relative !important;
+    z-index: 1051;
+    pointer-events: auto !important;
+  }
+  
+  nav *::before,
+  nav *::after {
+    pointer-events: none !important;
+  }
+  
+  .dropdown-menu {
+    position: static !important;
+    display: block !important;
+    z-index: 1052;
+  }
+  
+  .dropdown-item {
+    z-index: 1052;
+    pointer-events: auto !important;
+  }
+}
