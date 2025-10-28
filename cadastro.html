@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cadastro – ONG Digitalidade 60+</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <header>
+    <picture>
+      <source srcset="assets/img/logo.webp" type="image/webp">
+      <source srcset="assets/img/logo.png" type="image/png">
+      <img src="assets/img/logo.png" alt="Logo da ONG Digitalidade 60+" width="180">
+    </picture>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        
+        <li class="dropdown">
+          <a href="projetos.html">Projetos</a>
+          <ul class="dropdown-menu">
+            <li><a href="projetos.html#smartphones" class="dropdown-item">Oficina de Smartphones</a></li>
+            <li><a href="projetos.html#duplas" class="dropdown-item">Duplas Digitais</a></li>
+            <li><a href="projetos.html#ia" class="dropdown-item">IA no Dia a Dia</a></li>
+          </ul>
+        </li>
+        
+        <li><a href="cadastro.html">Cadastro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h1>Cadastro – Faça parte da Digitalidade 60+</h1>
+      <p>
+        Quer se voluntariar, participar das oficinas ou apoiar nossos projetos com uma doação?  
+        Preencha o formulário abaixo com seus dados e escolha como deseja contribuir.  
+        Sua participação é fundamental para levar a tecnologia e o conhecimento a quem mais precisa.
+      </p>
+      <p>
+        Participar da <strong>ONG Digitalidade 60+</strong> é fazer parte de uma rede que acredita no poder da inclusão digital e do aprendizado contínuo.
+Seja compartilhando seu tempo, seu conhecimento ou seu apoio, cada gesto conta — e ajuda a transformar a vida de pessoas que estão descobrindo o universo digital pela primeira vez.
+      </p>
+      <p>
+       Nossos voluntários são o coração do projeto: acolhem, ensinam, orientam e aprendem juntos com o público 60+.
+Cada oficina se torna um espaço de troca de experiências e de valorização da convivência intergeracional, onde todos crescem e se fortalecem.
+      </p>
+      <p>
+       Se preferir, você também pode apoiar nossas iniciativas com doações que ajudam a manter as atividades gratuitas, comprar equipamentos, produzir materiais didáticos e ampliar o alcance das ações.
+      </p>
+      <p>
+        Acreditamos que <strong>a tecnologia é uma ponte para a inclusão social</strong> — e você pode ser parte dessa transformação.
+Preencha seus dados com carinho e venha conosco construir um futuro mais conectado, humano e solidário.
+      </p>
+
+      <figure>
+        <picture>
+          <source srcset="assets/img/cadastro.webp" type="image/webp">
+          <source srcset="assets/img/cadastro.png" type="image/png">
+          <img src="assets/img/cadastro.png" alt="Participantes e voluntários preenchendo formulários em oficina de inclusão digital" width="600">
+        </picture>
+        <figcaption>Participantes realizando seu cadastro para as oficinas da Digitalidade 60+.</figcaption>
+      </figure>
+
+      <p>
+        Todos os dados são utilizados apenas para fins de contato e organização das atividades da ONG.  
+        O preenchimento correto garante que nossa equipe possa direcionar seu interesse da melhor forma.
+      </p>
+
+      <form>
+        <fieldset>
+          <legend>Dados pessoais</legend>
+
+          <label for="nome">Nome completo</label>
+          <input id="nome" name="nome" type="text" required>
+
+          <label for="email">E-mail</label>
+          <input id="email" name="email" type="email" required>
+
+          <label for="cpf">CPF</label>
+          <input id="cpf" name="cpf" type="text" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" required>
+
+          <label for="telefone">Telefone</label>
+          <input id="telefone" name="telefone" type="tel" placeholder="(11) 99999-0000" required>
+
+          <label for="nascimento">Data de nascimento</label>
+          <input id="nascimento" name="nascimento" type="date" required>
+        </fieldset>
+
+        <fieldset>
+          <legend>Endereço</legend>
+
+          <label for="cep">CEP</label>
+          <input id="cep" name="cep" type="text" pattern="\d{5}-\d{3}" placeholder="00000-000" required>
+
+          <label for="endereco">Endereço</label>
+          <input id="endereco" name="endereco" type="text" required>
+
+          <label for="cidade">Cidade</label>
+          <input id="cidade" name="cidade" type="text" required>
+
+          <label for="estado">Estado</label>
+          <select id="estado" name="estado" required>
+            <option value="">Selecione</option>
+            <option>SP</option><option>RJ</option><option>MG</option><option>RS</option>
+            <option>BA</option><option>PR</option><option>SC</option><option>PE</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>Como deseja participar?</legend>
+          <label><input type="radio" name="tipo" value="voluntario" required> Quero ser voluntário(a)</label><br>
+          <label><input type="radio" name="tipo" value="oficina"> Quero participar das oficinas</label><br>
+          <label><input type="radio" name="tipo" value="doador"> Quero contribuir com doações</label>
+        </fieldset>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 – ONG Digitalidade 60+</p>
+  </footer>
+
+  <script src="assets/js/menu.js"></script>
+</body>
+</html>

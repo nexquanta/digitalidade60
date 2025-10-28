@@ -5,26 +5,89 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>ONG Digitalidade 60+</title>
   <link rel="stylesheet" href="assets/css/main.css">
-  
-  <!-- Meta tags para SEO -->
-  <meta name="description" content="ONG dedicada à inclusão digital de pessoas 60+. Oficinas gratuitas de smartphones, redes sociais e tecnologia.">
-  <meta name="keywords" content="inclusão digital, idosos, terceira idade, tecnologia, 60+">
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/img/logo.png">
 </head>
 <body>
-  <!-- Conteúdo renderizado dinamicamente via JavaScript -->
-  
-  <!-- Carregamento inicial -->
-  <div style="display: flex; align-items: center; justify-content: center; min-height: 100vh; font-family: sans-serif; color: #ff0050;">
-    <div style="text-align: center;">
-      <h1 style="font-size: 2rem; margin-bottom: 1rem;">Digitalidade 60+</h1>
-      <p>Carregando...</p>
-    </div>
-  </div>
-  
-  <!-- Scripts JavaScript como módulos ES6 -->
-  <script type="module" src="assets/js/main.js"></script>
+  <header>
+    <picture>
+      <source srcset="assets/img/logo.webp" type="image/webp">
+      <source srcset="assets/img/logo.png" type="image/png">
+      <img src="assets/img/logo.png" alt="Logo da ONG Digitalidade 60+" width="180">
+    </picture>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        
+        <li class="dropdown">
+          <a href="projetos.html">Projetos</a>
+          <ul class="dropdown-menu">
+            <li><a href="projetos.html#smartphones" class="dropdown-item">Oficina de Smartphones</a></li>
+            <li><a href="projetos.html#duplas" class="dropdown-item">Duplas Digitais</a></li>
+            <li><a href="projetos.html#ia" class="dropdown-item">IA no Dia a Dia</a></li>
+          </ul>
+        </li>
+        
+        <li><a href="cadastro.html">Cadastro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h1>Conectando Gerações</h1>
+      <p>
+        A <strong>ONG Digitalidade 60+</strong> nasceu com o propósito de aproximar o público 60+ de novas tecnologias (celular, internet, redes sociais, AI), 
+        promovendo a inclusão digital de forma acessível, acolhedora e transformadora. 
+        Acreditamos que o aprendizado das novas iktecnologias digitais pode melhorar a autoestima, 
+        fortalecer vínculos familiares e abrir novas oportunidades para a melhor idade.
+      </p>
+      <p>
+        Mais do que ensinar o uso de ferramentas tecnológicas, nossa missão é despertar curiosidade, autonomia e confiança.
+Cada oficina é pensada para acolher o ritmo de aprendizado de cada pessoa, mostrando que nunca é tarde para aprender, explorar e se reinventar no mundo digital.
+      </p>
+      <p>
+        Em um ambiente leve e colaborativo, os participantes compartilham experiências, fazem novas amizades e descobrem formas simples e seguras de se conectar.
+É comum ver sorrisos sinceros ao enviar a primeira mensagem, realizar uma videochamada com a família ou descobrir o prazer de navegar pela internet com liberdade.
+      </p>
+      <p>
+        Nossas oficinas e cursos são voltados para pessoas com pouca ou nenhuma experiência digital. 
+        Durante as atividades, os participantes aprendem a enviar mensagens, realizar chamadas de vídeo, 
+        buscar informações na internet e até utilizar aplicativos de saúde, transporte e lazer.
+      </p>
+      <p>
+        Mais do que um espaço de aprendizado, a <strong>Digitalidade 60+</strong> é uma comunidade de apoio e convivência, onde cada conquista tecnológica é celebrada como um passo em direção à autonomia e à inclusão.
+      </p>
+
+      <figure>
+        <picture>
+          <source srcset="assets/img/hero.webp" type="image/webp">
+          <source srcset="assets/img/hero.png" type="image/png">
+          <img src="assets/img/hero.png" alt="Aprendendo a usar smartphones" width="600">
+        </picture>
+        <figcaption>Oficinas que unem aprendizado, convivência e acolhimento entre gerações.</figcaption>
+      </figure>
+    </section>
+
+<section class="missao-card">
+  <h2>Missão, Visão e Valores</h2>
+  <p><strong>Missão:</strong> promover o acesso digital para o público 60+ (melhor idade), estimulando a autonomia e uma participação mais ativa na sociedade.</p>
+  <p><strong>Visão:</strong> ser referência em inclusão digital para o público 60+, contribuindo para uma sociedade mais conectada e solidária.</p>
+  <p><strong>Valores:</strong> respeito, empatia, aprendizado contínuo e compromisso com a transformação social.</p>
+</section>
+
+<section class="fale-conosco-card">
+      <h2>Fale conosco</h2>
+      <p>Quer conhecer mais sobre nossos projetos ou se voluntariar? Entre em contato conosco:</p>
+      <p><strong>E-mail:</strong> contato@digitalidade60.org.br</p>
+      <p><strong>Telefone:</strong> (11) 3333-6060</p>
+      <p><strong>Endereço:</strong> Rua Conectividade, 100 – Vila Digital, São Paulo/SP</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 – ONG Digitalidade 60+</p>
+  </footer>
+
+  <script src="assets/js/menu.js"></script>
 </body>
 </html>
