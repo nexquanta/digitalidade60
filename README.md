@@ -1,204 +1,300 @@
-# Digitalidade 60+
-
-> Conectando gerações através da tecnologia acessível
-
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
-[![WCAG 2.1 AA](https://img.shields.io/badge/WCAG-2.1%20AA-green)](https://www.w3.org/WAI/WCAG21/quickref/)
+# ONG Digitalidade 60+ - Projeto Web Completo
 
 ## Sobre o Projeto
 
-A **Digitalidade 60+** é uma ONG fictícia criada como projeto acadêmico, mas inspirada em experiências reais do meu trabalho atual com digitalização e inclusão. No dia a dia, ajudo profissionais de terapias integrativas a levarem seu trabalho para o mundo digital, e percebo cada vez mais a procura do público 60+ por esse tipo de suporte.
+Site institucional da ONG Digitalidade 60+, uma organização dedicada à inclusão digital de pessoas com 60 anos ou mais. O projeto foi desenvolvido em três etapas como atividade acadêmica, demonstrando evolução progressiva de tecnologias web.
 
-Este projeto nasceu dessa observação: pessoas acima de 60 anos querem (e podem!) estar conectadas, mas precisam de ferramentas pensadas para elas. A Digitalidade 60+ oferece oficinas práticas de smartphones, alfabetização digital e integração com o universo online — tudo com muito acolhimento e respeito ao ritmo de aprendizado de cada pessoa.
+## Objetivos
 
-## Objetivos do Projeto
-
-Este website foi desenvolvido como trabalho final da disciplina Desenvolvimento Front-End Para Web, do curso de Análise e Desenvolvimento de Sistemas na Cruzeiro do Sul.
-
-Os objetivos técnicos e sociais incluem:
-
-- Criar uma plataforma acessível que reflita os valores de inclusão digital
-- Implementar boas práticas de HTML5 semântico, CSS moderno e JavaScript vanilla
-- Garantir conformidade com padrões WCAG 2.1 nível AA de acessibilidade
-- Demonstrar domínio de versionamento Git, organização de código e documentação técnica
-- Construir algo que, embora fictício, pudesse ser útil no mundo real
-
-## Funcionalidades
-
-### Acessibilidade em Primeiro Lugar
-- **3 modos de visualização**: Claro, Escuro e Alto Contraste
-- **Navegação 100% por teclado**: Tab, Enter, Escape — tudo funciona sem mouse
-- **Suporte a leitores de tela**: Estrutura semântica e ARIA labels
-- **Contraste adequado**: Mínimo de 4.5:1 em todos os modos (WCAG 2.1 AA)
-- **Preferências salvas**: O site lembra como você gosta de visualizar
-
-### Interface Responsiva
-- Design adaptado para desktop, tablet e mobile
-- Menu hambúrguer intuitivo no mobile
-- Dropdowns acessíveis em todas as resoluções
-- Imagens otimizadas e carregamento rápido
-
-### Single Page Application (SPA)
-- Navegação fluida sem recarregar a página
-- Validação de formulários em tempo real
-- Sistema de rotas implementado do zero em JavaScript puro
-- Histórico do navegador funcional (voltar/avançar)
-
-### Otimização para Produção
-- Arquivos CSS e JavaScript minificados
-- Estrutura modular e reutilizável
-- Código comentado e documentado
-- Performance otimizada
+- Promover a inclusão digital do público 60+
+- Apresentar projetos e oficinas da ONG
+- Facilitar cadastro de voluntários e participantes
+- Demonstrar competências em HTML, CSS e JavaScript moderno
 
 ## Tecnologias Utilizadas
 
-- **HTML5**: Estrutura semântica e acessível
-- **CSS3**: Design system com variáveis CSS, Flexbox e Grid
-- **JavaScript ES6+**: SPA, validações e gerenciamento de estado
-- **Git/GitHub**: Versionamento semântico e GitFlow
+### Frontend
+- HTML5 - Estrutura semântica e acessível
+- CSS3 - Design responsivo e moderno
+- JavaScript ES6+ - Funcionalidades interativas e SPA
+
+### Arquitetura
+- Single Page Application (SPA) - Navegação sem reload
+- Módulos ES6 - Código organizado e reutilizável
+- Template System - Renderização dinâmica de conteúdo
+- Sistema de Rotas - Gerenciamento de navegação
 
 ## Estrutura do Projeto
 
 ```
-digitalidade60plus/
-│
-├── index.html                 # Página principal
-├── cadastro.html             # Formulário de cadastro
-├── projetos.html             # Página de projetos
-│
+digitalidade60-plus/
+├── index.html
+├── README.md
 ├── assets/
 │   ├── css/
-│   │   ├── 01-variables.css  # Variáveis CSS (cores, espaçamentos)
-│   │   ├── 02-reset.css      # Reset e estilos base
-│   │   ├── 03-layout.css     # Grid, header, footer
-│   │   ├── 04-components.css # Cards, botões, formulários
-│   │   ├── 05-utilities.css  # Classes utilitárias
-│   │   ├── 06-extras.css     # Animações e extras
-│   │   ├── 07-themes.css     # Modos claro/escuro/alto contraste
-│   │   └── main.css          # Importa todos os módulos
-│   │
+│   │   ├── 01-variables.css
+│   │   ├── 02-reset.css
+│   │   ├── 03-layout.css
+│   │   ├── 04-components.css
+│   │   ├── 05-utilities.css
+│   │   ├── 06-extras.css
+│   │   └── main.css
 │   ├── js/
-│   │   ├── main.js           # Principal
-│   │   ├── spa.js            # Sistema de rotas SPA
-│   │   ├── templates.js      # Conteúdo das páginas
-│   │   ├── menu.js           # Menu responsivo
-│   │   ├── validation.js     # Validação de formulários
-│   │   └── accessibility.js  # Sistema de acessibilidade
-│   │
-│   ├── images/               # Imagens do projeto
-│   │
-│   └── dist/                 # Arquivos minificados
-│       ├── main.min.js
-│       └── main.min.css
-│
-└── README.md                 # Este arquivo
+│   │   ├── main.js
+│   │   ├── spa.js
+│   │   ├── templates.js
+│   │   ├── menu.js
+│   │   └── validation.js
+│   └── img/
+│       ├── logo.png
+│       ├── logo.webp
+│       ├── hero.png
+│       ├── hero.webp
+│       ├── cadastro.png
+│       ├── cadastro.webp
+│       ├── equipe.png
+│       ├── equipe.webp
+│       ├── projeto1.jpg
+│       ├── projeto1.webp
+│       ├── projeto2.jpg
+│       └── projeto2.webp
 ```
 
-## Como Executar
+## Funcionalidades
 
-### Pré-requisitos
-- Navegador moderno (Chrome, Firefox, Safari, Edge)
-- Servidor local (Live Server, http-server, ou similar)
+### Sistema SPA (Single Page Application)
+- Navegação entre páginas sem reload
+- Gerenciamento de rotas com History API
+- URLs amigáveis e navegáveis
+- Suporte a botões voltar e avançar do navegador
+- Scroll automático para seções específicas
 
-### Instalação
+### Sistema de Templates JavaScript
+- Renderização dinâmica de conteúdo
+- Templates modulares e reutilizáveis
+- Geração de HTML via JavaScript
+- Dados estruturados e separados da apresentação
 
-1. Clone o repositório:
-```bash
-git clone https://github.com/seu-usuario/digitalidade60plus.git
-cd digitalidade60plus
-```
+### Menu Responsivo
+- Menu hambúrguer para dispositivos móveis
+- Overlay com fechamento ao clicar fora
+- Tecla ESC para fechar
+- Transições suaves
+- Dropdown para submenu de projetos
 
-2. Inicie um servidor local:
-```bash
-# Usando Live Server (VS Code)
-# Clique com botão direito em index.html > Open with Live Server
+### Validação de Formulários
+- Validação em tempo real
+- Máscaras automáticas (CPF, CEP, telefone)
+- Verificação de consistência de dados
+- Mensagens de erro contextuais
+- Feedback visual (válido/inválido)
+- Validação de CPF com dígitos verificadores
+- Validação de idade mínima (18 anos)
+- Validação de formato de email
+- Notificações de sucesso e erro
 
-# OU usando Python
-python -m http.server 8000
-
-# OU usando Node.js
-npx http-server
-```
-
-3. Acesse no navegador:
-```
-http://localhost:5500  # Live Server
-http://localhost:8000  # Python
-```
-
-## Acessibilidade
-
-Este projeto foi desenvolvido seguindo as diretrizes **WCAG 2.1 nível AA**:
-
-- Estrutura HTML5 semântica
-- Navegação por teclado completa
-- Suporte a leitores de tela (NVDA, JAWS, VoiceOver)
-- Contraste de cores adequado (mínimo 4.5:1)
-- Textos alternativos em imagens
-- Labels em todos os campos de formulário
-- Foco visível em elementos interativos
-- Modo de alto contraste (21:1)
-
-### Atalhos de Teclado
-
-| Tecla | Ação |
-|-------|------|
-| `Tab` | Navegar para o próximo elemento |
-| `Shift + Tab` | Navegar para o elemento anterior |
-| `Enter` | Ativar link ou botão |
-| `Esc` | Fechar menu mobile |
+### Design Responsivo
+- Abordagem mobile-first
+- Breakpoints bem definidos
+- Imagens otimizadas (WebP com fallback)
+- Tipografia escalável
+- Acessibilidade (ARIA labels, contraste adequado)
 
 ## Design System
 
-O projeto utiliza um design system coeso com:
+### Cores Principais
+- Primary: #ff0050 (Rosa/Vermelho)
+- Background: #2d2d2d (Cinza escuro)
+- Cards: #000000 (Preto)
+- Text: #ffffff (Branco) / #e5e5e5 (Cinza claro)
 
-- **Paleta de cores**: Rosa vibrante (#ff3366) com tons neutros
-- **Tipografia**: System fonts para máxima legibilidade
-- **Espaçamento**: Sistema baseado em múltiplos de 4px
-- **Border radius**: Cantos levemente arredondados (8px)
-- **Sombras**: Profundidade sutil para hierarquia visual
+### Tipografia
+- Font Family: System fonts (-apple-system, Segoe UI, Arial, sans-serif)
+- Font Sizes: 0.75rem a 3rem (escala modular)
+- Line Heights: 1.25 a 1.75
 
-## Commits Semânticos
+### Espaçamentos
+- Scale: 0.25rem a 6rem (progressão consistente)
+- Grid Gap: 1.5rem
+- Container Max-Width: 1280px
 
-O projeto segue o padrão de commits semânticos:
+## Como Executar
 
-- `feat:` Nova funcionalidade
-- `fix:` Correção de bug
-- `docs:` Documentação
-- `style:` Formatação (não afeta código)
-- `refactor:` Refatoração de código
-- `test:` Testes
-- `chore:` Manutenção
+O projeto utiliza ES6 Modules, portanto requer um servidor web. Não é possível abrir diretamente o arquivo HTML no navegador devido a restrições de CORS.
 
-## Contribuindo
+### Com Python 3
+```bash
+python -m http.server 8000
+```
 
-Este é um projeto acadêmico, mas sugestões são bem-vindas! Se você encontrou algum problema ou tem ideias de melhoria:
+### Com Node.js
+```bash
+npx http-server -p 8000
+```
 
-1. Abra uma issue descrevendo o problema ou sugestão
-2. Fork o projeto
-3. Crie uma branch para sua feature (`git checkout -b feature/MinhaFeature`)
-4. Commit suas mudanças (`git commit -m 'feat: Adiciona nova funcionalidade'`)
-5. Push para a branch (`git push origin feature/MinhaFeature`)
-6. Abra um Pull Request
+### Com PHP
+```bash
+php -S localhost:8000
+```
 
-## Autor
+### Com VS Code
+1. Instale a extensão "Live Server"
+2. Clique com botão direito em index.html
+3. Selecione "Open with Live Server"
 
-**Rodrigo Correia Diniz**
+Após iniciar o servidor, acesse: http://localhost:8000
 
-- Estudante de Análise e Desenvolvimento de Sistemas
-- Cruzeiro do Sul - Turma_005
-- Disciplina: Desenvolvimento Front-End Para Web
+## Estrutura das Páginas
 
-## Agradecimentos
+### Home
+- Apresentação da ONG
+- Missão, visão e valores
+- Imagem principal
+- Informações de contato
 
-- Ao público 60+ que inspira este projeto todos os dias
-- Aos professores e colegas que contribuíram com feedback valioso
-- À comunidade open source por ferramentas e recursos incríveis
+### Projetos
+- Lista de projetos de inclusão digital
+- Cards com imagens e descrições
+- Oficina de Smartphones
+- Duplas Digitais
+- IA no Dia a Dia
+- Seção "Como Participar"
+
+### Cadastro
+- Formulário completo de cadastro
+- Validação em tempo real
+- Máscaras automáticas
+- Opções: Voluntário, Participante ou Doador
+
+## Validações Implementadas
+
+### CPF
+- Formato: 000.000.000-00
+- Validação de dígitos verificadores
+- Rejeita CPFs inválidos conhecidos
+
+### Email
+- Validação de formato padrão
+- Verificação de domínio
+
+### Telefone
+- Formato: (00) 00000-0000 ou (00) 0000-0000
+- Suporte a 8 e 9 dígitos
+
+### CEP
+- Formato: 00000-000
+- Apenas números
+
+### Data de Nascimento
+- Idade mínima: 18 anos
+- Idade máxima: 120 anos
+- Não aceita datas futuras
+
+## Etapas do Projeto
+
+### Etapa 1 - HTML
+- Estrutura semântica
+- Três páginas completas
+- Formulários acessíveis
+- Imagens otimizadas
+
+### Etapa 2 - CSS
+- Design system completo
+- Arquitetura modular (6 arquivos CSS)
+- Responsividade mobile-first
+- Animações e transições
+
+### Etapa 3 - JavaScript
+- Sistema SPA
+- Templates dinâmicos
+- Validação completa
+- Código modular (5 arquivos JavaScript)
+
+## Módulos JavaScript
+
+### main.js
+Ponto de entrada da aplicação. Inicializa todos os módulos e coordena a execução.
+
+### spa.js
+Sistema de Single Page Application. Gerencia rotas e navegação sem reload do navegador.
+
+Funcionalidades principais:
+- Interceptação de cliques em links
+- Integração com History API
+- Renderização de páginas
+- Suporte a navegação do browser
+- Tratamento de âncoras para scroll
+
+### templates.js
+Sistema de templates para renderização dinâmica de conteúdo HTML.
+
+Funcionalidades principais:
+- Templates de páginas completas
+- Templates de componentes
+- Dados estruturados
+- Geração dinâmica de HTML
+
+### menu.js
+Gerenciamento do menu responsivo com hambúrguer.
+
+Funcionalidades principais:
+- Criação dinâmica do botão hambúrguer
+- Overlay de fundo
+- Eventos de abertura e fechamento
+- Suporte a tecla ESC
+
+### validation.js
+Sistema completo de validação de formulários.
+
+Funcionalidades principais:
+- Validação em tempo real
+- Máscaras automáticas para CPF, CEP e telefone
+- Mensagens de erro específicas
+- Validação de CPF com algoritmo completo
+- Notificações de sucesso e erro
+
+## Navegadores Suportados
+
+- Chrome/Edge 90+
+- Firefox 88+
+- Safari 14+
+- Opera 76+
+
+## Breakpoints
+
+- Mobile: até 768px
+- Tablet: 768px a 1024px
+- Desktop: acima de 1024px
+
+## Boas Práticas Implementadas
+
+### HTML
+- Semântica correta
+- Acessibilidade (ARIA, textos alternativos)
+- Meta tags para SEO
+- Estrutura clara e organizada
+
+### CSS
+- Metodologia modular
+- Variáveis CSS (Custom Properties)
+- Abordagem mobile-first
+- Otimização de performance
+
+### JavaScript
+- Módulos ES6+
+- Código limpo e legível
+- Separação de responsabilidades
+- Event delegation
+- Tratamento de erros
+
+## Contato (Fictício)
+
+ONG Digitalidade 60+
+Email: contato@digitalidade60.org.br
+Telefone: (11) 3333-6060
+Endereço: Rua Conectividade, 100 - Vila Digital, São Paulo/SP
 
 ---
 
-**Nota**: Este é um projeto acadêmico fictício desenvolvido para fins educacionais. A ONG Digitalidade 60+ não existe como entidade real, mas o conceito e a necessidade que representa são muito reais.
-
-Desenvolvido com dedicação por Rodrigo Correia Diniz
+Versão: 3.0.0
+Última atualização: Outubro 2025
