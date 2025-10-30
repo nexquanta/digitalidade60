@@ -7,8 +7,8 @@ const appData = {
     {
       id: 'smartphones',
       titulo: 'Oficina de Smartphones',
-      imagem: 'assets/img/projeto1.jpg',
-      imagemWebp: 'assets/img/projeto1.webp',
+      imagem: 'digitalidade60/assets/img/projeto1.jpg',
+      imagemWebp: 'digitalidade60/assets/img/projeto1.webp',
       alt: 'Oficina de smartphones para adultos da melhor idade',
       descricao: 'Nessa oficina, os participantes aprendem desde o básico — como configurar o celular, conectar-se ao Wi-Fi e enviar mensagens — até funções mais avançadas, como chamadas de vídeo, uso de aplicativos bancários e segurança digital.',
       figcaption: 'Adultos da melhor idade aprendendo a usar o celular com instrutores voluntários.'
@@ -16,8 +16,8 @@ const appData = {
     {
       id: 'duplas',
       titulo: 'Duplas Digitais',
-      imagem: 'assets/img/projeto2.jpg',
-      imagemWebp: 'assets/img/projeto2.webp',
+      imagem: 'digitalidade60/assets/img/projeto2.jpg',
+      imagemWebp: 'digitalidade60/assets/img/projeto2.webp',
       alt: 'Voluntário auxiliando um participante',
       descricao: 'O projeto "Duplas Digitais" une gerações. Jovens voluntários acompanham adultos 60+ em sessões semanais, ensinando o uso de redes sociais, plataformas de mensagens e aplicativos de vídeo. É um espaço de aprendizado mútuo e convivência afetiva.',
       figcaption: 'Jovens e adultos 60+ trocando experiências sobre tecnologia.'
@@ -25,8 +25,8 @@ const appData = {
     {
       id: 'ia',
       titulo: 'IA no Dia a Dia',
-      imagem: 'assets/img/equipe.png',
-      imagemWebp: 'assets/img/equipe.webp',
+      imagem: 'digitalidade60/assets/img/equipe.png',
+      imagemWebp: 'digitalidade60/assets/img/equipe.webp',
       alt: 'Oficina de Inteligência Artificial com adultos da melhor idade',
       descricao: 'Este curso introdutório apresenta as principais ferramentas de Inteligência Artificial e assistentes virtuais. De forma simples, mostramos como usar comandos de voz, aplicativos inteligentes e sistemas que podem facilitar a rotina doméstica e de comunicação.',
       figcaption: 'Participantes aprendendo sobre assistentes virtuais e ferramentas digitais.'
@@ -39,9 +39,9 @@ function headerTemplate() {
   return `
     <header>
       <picture>
-        <source srcset="assets/img/logo.webp" type="image/webp">
-        <source srcset="assets/img/logo.png" type="image/png">
-        <img src="assets/img/logo.png" alt="Logo da ONG Digitalidade 60+" width="180">
+        <source srcset="digitalidade60/assets/img/logo.webp" type="image/webp">
+        <source srcset="digitalidade60/assets/img/logo.png" type="image/png">
+        <img src="digitalidade60/assets/img/logo.png" alt="Logo da ONG Digitalidade 60+" width="180">
       </picture>
 
       <nav>
@@ -106,9 +106,9 @@ function homeTemplate() {
 
         <figure>
           <picture>
-            <source srcset="assets/img/hero.webp" type="image/webp">
-            <source srcset="assets/img/hero.png" type="image/png">
-            <img src="assets/img/hero.png" alt="Aprendendo a usar smartphones" width="600">
+            <source srcset="digitalidade60/assets/img/hero.webp" type="image/webp">
+            <source srcset="digitalidade60/assets/img/hero.png" type="image/png">
+            <img src="digitalidade60/assets/img/hero.png" alt="Aprendendo a usar smartphones" width="600">
           </picture>
           <figcaption>Oficinas que unem aprendizado, convivência e acolhimento entre gerações.</figcaption>
         </figure>
@@ -192,7 +192,7 @@ function projetosTemplate() {
           Voluntários podem atuar em aulas, suporte técnico ou comunicação digital.  
           As doações são utilizadas para compra de tablets, manutenção de equipamentos e produção de material didático.
         </p>
-        <p><a href="/cadastro.html">Acesse o formulário de cadastro</a> e venha fazer parte da transformação digital 60+!</p>
+        <p><a href="cadastro.html">Acesse o formulário de cadastro</a> e venha fazer parte da transformação digital 60+!</p>
       </section>
     </main>
 
