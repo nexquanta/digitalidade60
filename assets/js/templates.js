@@ -2,14 +2,13 @@
 // Cria e gerencia todo o HTML da aplicação via JavaScript
 
 // Dados da aplicação (simulando conteúdo dinâmico)
-const basePath = "https://nexquanta.github.io/digitalidade60/";
 const appData = {
   projetos: [
     {
       id: 'smartphones',
       titulo: 'Oficina de Smartphones',
-      imagem: `${basePath}assets/img/projeto1.jpg`,
-      imagemWebp: `${basePath}assets/img/projeto1.webp`,
+      imagem: 'assets/img/projeto1.jpg',
+      imagemWebp: 'assets/img/projeto1.webp',
       alt: 'Oficina de smartphones para adultos da melhor idade',
       descricao: 'Nessa oficina, os participantes aprendem desde o básico — como configurar o celular, conectar-se ao Wi-Fi e enviar mensagens — até funções mais avançadas, como chamadas de vídeo, uso de aplicativos bancários e segurança digital.',
       figcaption: 'Adultos da melhor idade aprendendo a usar o celular com instrutores voluntários.'
@@ -17,8 +16,8 @@ const appData = {
     {
       id: 'duplas',
       titulo: 'Duplas Digitais',
-      imagem: `${basePath}assets/img/projeto2.jpg`,
-      imagemWebp: `${basePath}assets/img/projeto2.webp`,
+      imagem: 'assets/img/projeto2.jpg',
+      imagemWebp: 'assets/img/projeto2.webp',
       alt: 'Voluntário auxiliando um participante',
       descricao: 'O projeto "Duplas Digitais" une gerações. Jovens voluntários acompanham adultos 60+ em sessões semanais, ensinando o uso de redes sociais, plataformas de mensagens e aplicativos de vídeo. É um espaço de aprendizado mútuo e convivência afetiva.',
       figcaption: 'Jovens e adultos 60+ trocando experiências sobre tecnologia.'
@@ -26,8 +25,8 @@ const appData = {
     {
       id: 'ia',
       titulo: 'IA no Dia a Dia',
-      imagem: `${basePath}assets/img/equipe.png`,
-      imagemWebp: `${basePath}assets/img/equipe.webp`,
+      imagem: 'assets/img/equipe.png',
+      imagemWebp: 'assets/img/equipe.webp',
       alt: 'Oficina de Inteligência Artificial com adultos da melhor idade',
       descricao: 'Este curso introdutório apresenta as principais ferramentas de Inteligência Artificial e assistentes virtuais. De forma simples, mostramos como usar comandos de voz, aplicativos inteligentes e sistemas que podem facilitar a rotina doméstica e de comunicação.',
       figcaption: 'Participantes aprendendo sobre assistentes virtuais e ferramentas digitais.'
@@ -40,26 +39,26 @@ function headerTemplate() {
   return `
     <header>
       <picture>
-       <source srcset="${basePath}assets/img/logo.webp" type="image/webp">
-<source srcset="${basePath}assets/img/logo.png" type="image/png">
-<img src="${basePath}assets/img/logo.png" alt="Logo da ONG Digitalidade 60+" width="180">
+        <source srcset="assets/img/logo.webp" type="image/webp">
+        <source srcset="assets/img/logo.png" type="image/png">
+        <img src="assets/img/logo.png" alt="Logo da ONG Digitalidade 60+" width="180">
       </picture>
 
       <nav>
-         <ul>
-    <li><a href="#/">Início</a></li>
-
-    <li class="dropdown">
-      <a href="#/projetos">Projetos</a>
-      <ul class="dropdown-menu">
-        <li><a href="#/projetos#smartphones" class="dropdown-item">Oficina de Smartphones</a></li>
-        <li><a href="#/projetos#duplas" class="dropdown-item">Duplas Digitais</a></li>
-        <li><a href="#/projetos#ia" class="dropdown-item">IA no Dia a Dia</a></li>
-      </ul>
-    </li>
-
-    <li><a href="#/cadastro">Cadastro</a></li>
-  </ul>
+        <ul>
+          <li><a href="/index.html">Início</a></li>
+          
+          <li class="dropdown">
+            <a href="/projetos.html">Projetos</a>
+            <ul class="dropdown-menu">
+              <li><a href="/projetos.html#smartphones" class="dropdown-item">Oficina de Smartphones</a></li>
+              <li><a href="/projetos.html#duplas" class="dropdown-item">Duplas Digitais</a></li>
+              <li><a href="/projetos.html#ia" class="dropdown-item">IA no Dia a Dia</a></li>
+            </ul>
+          </li>
+          
+          <li><a href="/cadastro.html">Cadastro</a></li>
+        </ul>
       </nav>
     </header>
   `;
@@ -107,9 +106,9 @@ function homeTemplate() {
 
         <figure>
           <picture>
-           <source srcset="${basePath}assets/img/hero.webp" type="image/webp">
-<source srcset="${basePath}assets/img/hero.png" type="image/png">
-<img src="${basePath}assets/img/hero.png" alt="Aprendendo a usar smartphones" width="600">
+            <source srcset="assets/img/hero.webp" type="image/webp">
+            <source srcset="assets/img/hero.png" type="image/png">
+            <img src="assets/img/hero.png" alt="Aprendendo a usar smartphones" width="600">
           </picture>
           <figcaption>Oficinas que unem aprendizado, convivência e acolhimento entre gerações.</figcaption>
         </figure>
@@ -193,8 +192,7 @@ function projetosTemplate() {
           Voluntários podem atuar em aulas, suporte técnico ou comunicação digital.  
           As doações são utilizadas para compra de tablets, manutenção de equipamentos e produção de material didático.
         </p>
-       <p><a href="#/cadastro">Acesse o formulário de cadastro</a> e venha fazer parte da transformação digital 60+!</p>
-
+        <p><a href="/cadastro.html">Acesse o formulário de cadastro</a> e venha fazer parte da transformação digital 60+!</p>
       </section>
     </main>
 
@@ -233,9 +231,9 @@ function cadastroTemplate() {
 
         <figure>
           <picture>
-            <source srcset="${basePath}assets/img/cadastro.webp" type="image/webp">
-            <source srcset="${basePath}assets/img/cadastro.png" type="image/png">
-            <img src="${basePath}assets/img/cadastro.png" alt="Participantes e voluntários preenchendo formulários em oficina de inclusão digital" width="600">
+            <source srcset="assets/img/cadastro.webp" type="image/webp">
+            <source srcset="assets/img/cadastro.png" type="image/png">
+            <img src="assets/img/cadastro.png" alt="Participantes e voluntários preenchendo formulários em oficina de inclusão digital" width="600">
           </picture>
           <figcaption>Participantes realizando seu cadastro para as oficinas da Digitalidade 60+.</figcaption>
         </figure>
