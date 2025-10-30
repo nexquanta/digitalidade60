@@ -45,20 +45,20 @@ function headerTemplate() {
       </picture>
 
       <nav>
-        <ul>
-          <li><a href="index.html">Início</a></li>
-          
-          <li class="dropdown">
-            <a href="projetos.html">Projetos</a>
-            <ul class="dropdown-menu">
-              <li><a href="projetos.html#smartphones" class="dropdown-item">Oficina de Smartphones</a></li>
-              <li><a href="projetos.html#duplas" class="dropdown-item">Duplas Digitais</a></li>
-              <li><a href="projetos.html#ia" class="dropdown-item">IA no Dia a Dia</a></li>
-            </ul>
-          </li>
-          
-          <li><a href="cadastro.html">Cadastro</a></li>
-        </ul>
+         <ul>
+    <li><a href="#/">Início</a></li>
+
+    <li class="dropdown">
+      <a href="#/projetos">Projetos</a>
+      <ul class="dropdown-menu">
+        <li><a href="#/projetos#smartphones" class="dropdown-item">Oficina de Smartphones</a></li>
+        <li><a href="#/projetos#duplas" class="dropdown-item">Duplas Digitais</a></li>
+        <li><a href="#/projetos#ia" class="dropdown-item">IA no Dia a Dia</a></li>
+      </ul>
+    </li>
+
+    <li><a href="#/cadastro">Cadastro</a></li>
+  </ul>
       </nav>
     </header>
   `;
