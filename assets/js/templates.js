@@ -46,18 +46,18 @@ function headerTemplate() {
 
       <nav>
         <ul>
-          <li><a href="/index.html">Início</a></li>
+          <li><a href="index.html">Início</a></li>
           
           <li class="dropdown">
-            <a href="/projetos.html">Projetos</a>
+            <a href="projetos.html">Projetos</a>
             <ul class="dropdown-menu">
-              <li><a href="/projetos.html#smartphones" class="dropdown-item">Oficina de Smartphones</a></li>
-              <li><a href="/projetos.html#duplas" class="dropdown-item">Duplas Digitais</a></li>
-              <li><a href="/projetos.html#ia" class="dropdown-item">IA no Dia a Dia</a></li>
+              <li><a href="projetos.html#smartphones" class="dropdown-item">Oficina de Smartphones</a></li>
+              <li><a href="projetos.html#duplas" class="dropdown-item">Duplas Digitais</a></li>
+              <li><a href="projetos.html#ia" class="dropdown-item">IA no Dia a Dia</a></li>
             </ul>
           </li>
           
-          <li><a href="/cadastro.html">Cadastro</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
         </ul>
       </nav>
     </header>
